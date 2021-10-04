@@ -1,0 +1,51 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+
+1. Structures data types can demand a lot of memory (for example the "ReportData" structure). Without digging into advanced memory management (for example padding), how many bytes of memory would the "ReportData" structure require? How could we improve the passing of this information to functions? Use the function "displayReportData" from this workshop in your explanation.
+
+struct ReportData
+{
+	int sku;
+	double price;
+	int calories;
+	double weight_lbs;
+	double weight_kg;
+	int weight_g;
+	double total_serving;
+	double cost_per_serving;
+	double calories_per_serving;
+};
+
+An int occupies 4 bytes and a double occupies 8 bytes. So the "ReportData" structure have 3 ints and 6 doubles, totally require 3*4 + 6*8 = 60 bytes.
+
+In the function "displayReportData", there are so many members and occupied a lot of memory. If we can reduce the members, we can safe memory. Inside of the function "displayReportData", there is one parameter. The parameter is struct "ReportData". The struct "ReportData" actually contain same members with struct "CatFoodInfo". Therefore, if we put the structure "CatFoodInfo" inside of the structure "ReportData", we can reduce some members and reduce the memory that function required.
+
+
+
+2. The CatFoodInfo structure and the ReportData structure contain common members. How could the "ReportData" structure be improved? Show the new and improved "ReportData" structure with your changes, then show how you would modify your code in the function "displayReportData". Specifically, show how you would need to modify the printf statement that displays the data.
+
+I can put the structure "CatFoodInfo" inside of the structure "ReportData". So the ReportData structure would be something like:
+
+struct ReportData
+{
+	struct CatFoodInfo food;
+	double weight_kg;
+	int weight_g;
+	double total_serving;
+	double cost_per_serving;
+	double calories_per_serving;
+} data;
+
+in the function "displayReportData", I would change the code to:
+
+void displayReportData(const struct ReportData data, const int cheapestoption)
+{
+	if (cheapestoption == 0)
+		printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf\n",data.food.sku, data.food.price, data.food.calories, data.food.weight, data.weight_kg, data.weight_g, data.total_serving, data.cost_per_serving, data.calories_per_serving);
+
+	if (cheapestoption != 0)
+		printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf ***\n",data.food.sku, data.food.price, data.food.calories, data.food.weight, data.weight_kg, data.weight_g, data.total_serving, data.cost_per_serving, data.calories_per_serving);
+}
