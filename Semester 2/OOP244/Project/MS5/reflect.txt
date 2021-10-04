@@ -1,0 +1,16 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.08.03            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+This is a big and complex project to complete. The purpose of this project is to help hospitals. To prevent the spread of COVID-19, they need to screen the patients and also they want to separate the normal patients and potential COVID-19 patients.
+
+To do so, we separate this project to several different modules. In the milestone 1, we first made the utils module. In this module, we created some useful functions that we may use many times in this project, so that we can reduce duplicated code. For example, getInt and getcstr. Besides, we need to set the time value, so that we can know how long should those patients need to wait. Therefore, we need time module. In this module, it can read and write time values, and can do the basic arithmetic operations. In the milestone 2, we design the menu for this project. We also want to create interface module, so that we created IOAble module. In this module, there are only 4 pure virtual functions and a virtual empty destructor, csvWrite, csvRead, write, read and virtual destructor. 
+
+In the milestone 3, we created ticket module. This is to create a ticket for patients when they arrive to the hospitals. Also we created patient module. Because we need to separate the normal patients and potential COVID-19 patients, this patient module is a parent class of COVID test patient and a triage patient. Therefore, in the milestone 4, we created the CovidPatient module and the TriagePatient Module. These two module are inherited from patient module. In the milestone 5, we created the PreTriage Module. This module creates a lineup of patients and gives tickets for them when they arrive to the hospitals.
+
+I think the most difficult part of this project is that when the project goes bigger, the files and modules are also become bigger and complex. So when we need to modify something or need to change some code, it is really difficult to debug or find the problem. I believe this is a good practice because when we working, we must face the real problem from real world. And they must be more complex then school project.

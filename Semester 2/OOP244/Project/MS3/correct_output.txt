@@ -1,0 +1,96 @@
+Script started on Mon 22 Mar 2021 07:40:17 PM EDT
+==135753== Memcheck, a memory error detector
+==135753== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==135753== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==135753== Command: ws
+==135753== 
+Enter The following:
+-------------------
+John Doe
+abc
+100
+123123123
+12:34
+-------------------
+Name: John Doe
+OHIP:abc
+Bad integer value, try again: 100
+Invalid OHIP Number, [100000000 <= value <= 999999999]: 123123123
+Enter current time: 12:34
+Sections 1 and 2 should match: 
+
+1- Your output on screen:
+Ticket No: 24, Issued at: 12:34
+John Doe, OHIP: 123123123
+2- The output should be :
+Ticket No: 24, Issued at: 12:34
+John Doe, OHIP: 123123123
+
+1- Your comma separated ouput: 
+W,John Doe,123123123,24,12:34
+2- comma separated ouput should be: 
+W,John Doe,123123123,24,12:34
+
+Enter the following: 
+>Jo Lee,234234234,200,12:50
+>Jo Lee,234234234,200,12:50
+Sections 1 and 2 should match: 
+
+1- Your output on screen:
+Ticket No: 200, Issued at: 12:50
+Jo Lee, OHIP: 234234234
+2- The output should be:
+Ticket No: 200, Issued at: 12:50
+Jo Lee, OHIP: 234234234
+
+Testing File IO: 
+1 -----------------------------------------------
+Ticket No: 10, Issued at: 12:50
+David Mason, OHIP: 111111111
+
+2 -----------------------------------------------
+Ticket No: 11, Issued at: 12:51
+Nick Gilmour, OHIP: 222222222
+
+3 -----------------------------------------------
+Ticket No: 12, Issued at: 12:52
+Roger Wright, OHIP: 333333333
+
+4 -----------------------------------------------
+Ticket No: 13, Issued at: 12:53
+Rick Waters, OHIP: 333333333
+
+5 -----------------------------------------------
+Ticket No: 14, Issued at: 12:54
+A name that is way way wa, OHIP: 444444444
+
+ms3out.csv-----------------------
+W,David Mason,111111111,10,12:50
+W,Nick Gilmour,222222222,11,12:51
+W,Roger Wright,333333333,12,12:52
+W,Rick Waters,333333333,13,12:53
+W,A name that is way way way way way way way way too long,444444444,14,12:54
+---------------------------------
+Testing operator== overloads: 
+Success!
+Success!
+Testing Time cast and number: 
+Sections 1 and 2 should match: 
+
+1- Your output on screen:
+W, Ticket Time: 12:54
+W, Ticket number: 14
+2- The output should be:
+W, Ticket Time: 12:54
+W, Ticket number : 14
+==135753== 
+==135753== HEAP SUMMARY:
+==135753==     in use at exit: 0 bytes in 0 blocks
+==135753==   total heap usage: 29 allocs, 29 frees, 99,611 bytes allocated
+==135753== 
+==135753== All heap blocks were freed -- no leaks are possible
+==135753== 
+==135753== For lists of detected and suppressed errors, rerun with: -s
+==135753== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Mon 22 Mar 2021 07:40:40 PM EDT
