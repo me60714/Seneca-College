@@ -1,0 +1,21 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+1. Describe the benefits and advantages of using user-defined types (structures) in this workshop. You must explain your answer using an example from this workshop.
+
+
+The first benefit of using structures is that it makes programs more readable. The way of a structure be wrote is similar to English, so it is easier for others to read the code. The second benefit of using structure is that it makes it easier for programers to manage lots of different datas. A structure can store multiple similar datas together, even there are different type of datas, so it is convenient to maintain and renew. In this workshop, I stored different datas in two structs, one is PlayerInfo, another is GameInfo. So by doing so, I can preliminary classify all the datas and make me easier to arrange them or fix them.
+
+
+2. If we enhanced this workshop to keep a history of games played including the endgame results, briefly describe what two major logical changes you would have to make to your program to make this possible?
+
+
+First, we need to save the results of each games, such as the number of left lives, numbers of treasures and numbers of moves remaining. We can stored these datas to a new structure. Second, we make a score board and use the datas to display all the endgame results.
+
+
+3. What part of this workshop did you spend the most time working on? What did you do to overcome your difficulties?
+
+
+I think the most time-consuming part is not during the coding, is after the coding. When I took several hours to finish the code, I thought I nearly done this workshop. However, the most time-consuming and difficult part is here. When I ran the task, there are so many place that their output are not what I expected. Therefore, another several hours to fix those parts. I think the most useful way is to do a walkthrough, step by step and then all the tiny problems can be fix properly.
