@@ -1,0 +1,38 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+1. From the helper functions library, what function was the most challenging to define and clearly describe the challenge(s) including how you managed to overcome them in the context of the methods used in preparing your logic, debugging, and testing.
+
+
+All of those functions in the assignment #1, I think the most difficult one to define is definitely "getCString". There are some reasons. First, the concept of C strings is newer and unfamiliar to me. So I read the material about C strings very carefully. The supply document "Introduction to C Strings" in the instruction is very helpful. Because of the supply document, I have barely syntax errors. Even I have one, I can quickly find it and fix it.
+
+The second reason of why the most challenging functions to define is "getCString" is that it has the most complex logic in all functions. This function can be split to several different parts. The first part is I need to count the length of the string that user input. For this part, I use for loop to count how many times will i in cstring[i] meet the '\0' (which is the terminator character of a string array).
+
+Another part of "getCString" function is that I need to print different ERROR messages depend on the different length of the user input. This part is not so difficult but still need cautiousness. I use if loop to give different task in different condition. Outside of the for loop and if loop, I use a do-while loop. Also, I set a flag so that when the condition match the right one, the do-while loop will end. After fix some syntax errors, I walkthrough this function and make sure all the logic is perfect and do not have any semantic errors.
+
+
+2. Describe how the “helper functions” library contributes toward making the code easier to read and include in your analysis why the library will make your code easier to maintain.
+
+
+The first reason is that all the names of the functions and parameters inside the functions are meaningful. So that people can easily understand the meaning. Take the function "getIntFromRange" for example, even people who see this function in the first time can easily guess the meaning is something like "get an integer from a range". And it's parameters, lower_bound and upper_bound, are understandable.
+
+The second reason is that with the “helper functions” library, the code become systematically. There are no more less important code in the main() function. Besides, if there are similar code need to be code, I can use functions several times without cope and paste a long list of code. Therefore, let the layout clear and easy to read.
+
+The last but not least, if I use functions inside my program, I can easily fix or replace the functions without making huge change. For example, in below part of my code,
+	
+	printf("Enter the account number: ");
+	account.num_account = getInteger();
+
+I use the function "getInteger" to grab use's account numbers, and will print different messages if users input different type of information. If I found there are some errors and bugs about the logic, I can just go to the “helper functions” library and fix the definition of the function "getInteger". Once I have fixed the function in the “helper functions” library, every "getInteger" called in my same program will be fixed without modify. Hence, it do make my code easier to maintain.
+
+
+3. Comment on why the C programming language provides a programmer the ability to create new data types (struct) and what advantages does this have? Are there limitations in the construction of a new data type – if so, what specifically?
+
+The first advantages of using struct is that struct makes the code more readable and easier to maintain. Without structs,  programmers may declare a lot of variables, not only let the code looks miserable but also cause the program hard to maintain. The second advantages is that programmers can return a group of data instead of single data when using struct.
+
+However, after using structs to complete the assignment, I do found some disadvantages of using structs. First, I cannot use functions inside of structs. This is kind of inconvenience, since using functions inside of structs sounds intuitive. Second, if I want to use struct properly, I must plan the whole program very carefully. It is convenient for now because I always follow by professor's instruction. Once I need to plan the whole program, it will cost a lot of time to plan and construct, and make sure where to use structures.
+
+
+

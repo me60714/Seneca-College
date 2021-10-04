@@ -1,0 +1,21 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+1. As painful and frustrating as it may be to match the expected output exactly, explain why you think you must be put through this challenge and expected to meet this minimum expectation.
+
+In my opinion, I think the ability of format a program is very important. Indeed, it seems annoying and would not affect to the process of the program. However,  via the practice of the match the output of the program, I quickly increase the ability of using C and become more and more familiar with the C program and more skillful.
+
+Beside, when we graduated from school and enter the workplace, not everything can be decided by us. We may be asked to do something or to reach some goal by our  co-workers, our boss, or even our clients. Hence, it is a useful skill to put C language into practice.
+
+2. What factors must you consider when naming a module or library? Why do you think it is a suggested best practice to identify a module/library header and source code files using the same name? Give an example to support your argument.
+
+The return value of function "findAccountIndexByAcctNum" cost me the most of the time to figure out what name should give to it. That is because this value have actually two different meanings. One is that if this value equal to -1 means the account number was not found in the account array. The other meaning is that if it do find the same account number in the account array, it will equal to the account number.
+
+It it better to to identify a module/library header and source code files using the same name because when the program become bigger, there will be more and more functions, modules, or library. Therefore, it is hard to name every value to a different and proper name.
+
+
+3. This application applies a cascading menu system framework. What does this mean and explain it using elements from this application to support your understanding of this logical concept?
+
+The menu system inside this application is like a cascade. From outside to inside and combine together. The most outside is "applicationStartup" then to "menuLogin" then to "menuAgent". And there are many little functions inside these big functions, just like streams from the rivers.
