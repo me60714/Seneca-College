@@ -1,0 +1,207 @@
+<!-- 
+* WEB222 – Final Assessment
+*
+* I declare that this assignment is my own work in accordance with
+* Seneca Academic Policy. No part of this assignment has been
+* copied manually or electronically from any other source
+* (including web sites) or distributed to other students.
+*
+* Please update the following with your information:
+*
+* Name: Wei-Chih Kao
+* Student ID: 158000190
+* Date: 2021.08.11 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wei-Chih Kao WEB222 Final Assessment – Summer 2021</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+  <section class="container top">
+    <img src="images/IMG_3402.PNG">
+    <div class="me">
+      <div id="name">WEI-CHIH KAO</div>
+      <div id="title">Web Developer</div>
+      <button class="button btn-contect" id="contectMe" ><a href="#">Resume</a></button>
+      <button class="button btn-resume"><a href="#contactMe">Contact Me</a></button>
+    </div>
+  </section>
+
+  <section class="container infographic">
+    <h2>About Me and Academic Honesty</h2>
+    <div class="academic_honesty">
+      I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment
+      has been copied manually or electronically from any other source (including web sites) except for the information
+      supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of
+      this assignment has been distributed to other students.
+
+      <div class="sign">
+        <div>
+          <div class="name">Name :</div>
+          <div class="handwrite">Wei-Chih Kao</div>
+        </div>
+        <div>
+          <div class="date">Date :</div>
+          <div class="handwrite">Aug 9, 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Basic Information</h2>
+    <div class="container basicInfo">
+      <div class="question">
+        <ul>
+          <li>AGE :</li>
+          <li>EMAIL :</li>
+          <li>LANGUAGE  :</li>
+          <li>CLASS SECTION :</li>
+          <li>STUDENT ID :</li>
+          <li>INSTRUCTOR  :</li>
+        </ul>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>26</li>
+          <li>wkao3@myseneca.ca</li>
+          <li>English, Mandarin</li>
+          <li>ZBB</li>
+          <li>158000190</li>
+          <li>Professor Nima Mahmoudi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container education">
+    <div class="eduTitle">Education</div>
+    <div class="education-cards">
+      <div class="card">
+        <div class="card-color">
+          <div class="card-text-date">2021-2023(expected)</div>
+          <div class="card-text-degree">Advanced Diploma</div>
+        </div>
+        <div class="card-info">
+          <div>Computer Programming & Analysis</div>
+          <div>Seneca College</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-color">
+          <div class="card-text-date">2013-2016</div>
+          <div class="card-text-degree">Bachelor Degree</div>
+        </div>
+        <div class="card-info">
+          <div>History</div>
+          <div>Nation Taiwan Normal University</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container contactMe" id="contactMe">
+    <div class="contactMe-title">Contact Me</div>
+    <form id="appt-form" action="http://httpbin.org/post" method="POST">
+
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="fname" class="form-label"><span class="text-danger">* </span>First Name</label>
+          <input class="form-control" type="text" name="fname" id="fname" autocomplete="given-name" tabindex="1" required>
+        </div>
+        <div class="mb-3 col">
+          <label for="lname" class="form-label"><span class="text-danger">* </span>Last Name</label>
+          <input class="form-control" type="text" name="lname" id="lname" autocomplete="family-name" tabindex="2" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="email" class="form-label"><span class="text-danger">* </span>Email Address</label>
+          <input class="form-control" type="email" name="email" id="email" autocomplete="email" tabindex="3" required>
+        </div>
+        <div class="mb-3 col">
+          <label for="phone" class="form-label"><span class="text-danger">* </span>Phone Number</label>
+          <input class="form-control" type="tel" name="phone" id="phone" autocomplete="phone" tabindex="4" required>
+          <div class="invalid-feedback">
+            Please enter a valid phone number.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="address" class="form-label"><span class="text-danger">* </span>Street Address</label>
+          <input class="form-control" type="text" name="address" id="address" autocomplete="street-address" tabindex="5" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="city" class="form-label"><span class="text-danger">* </span>City</label>
+          <select class="form-select" name="city" id="city" autocomplete="address-level2" tabindex="6" required>
+            <option>Banff</option>
+            <option>Calgary</option>
+            <option>Lake Louise</option>
+            <option>Liverpool</option>
+            <option>Montreal</option>
+            <option>Quebec</option>
+            <option>Toronto</option>
+            <option>Vancouver</option>
+            <option>Victoria</option>
+            <option>Waterloo</option>
+          </select>
+        </div>
+          <div class="mb-3 col">
+            <label for="postal-code" class="form-label"><span class="text-danger">* </span>Postal Code</label>
+            <input class="form-control" type="text" name="postal-code" id="postal-code" autocomplete="postal-code" tabindex="7" required placeholder="M5W 1E6">
+            <div class="invalid-feedback">
+              Please enter a valid postal code.
+            </div>
+          </div>
+      </div>
+      
+      <div class="row">
+        <div class="mb-3 col">
+          <label class="form-label me-3"><span class="text-danger">* </span>Purpose</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="purpose" id="question" value="question" tabindex="8" checked>
+            <label class="form-check-label" for="question">Question</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="purpose" id="comment" value="comment" tabindex="9">
+            <label class="form-check-label" for="comment">Comment</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="purpose" id="hiring" value="hiring" tabindex="10">
+            <label class="form-check-label" for="hiring">Hiring</label>
+            <input type="hidden" name="HourlyRate" id="hidden" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="message" class="form-label"><span class="text-danger">* </span>Message</label>
+          <textarea id="message" name="message" class="form-control" tabindex="11" required rows="6"></textarea>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row-reverse">
+        <input class="btn btn-primary" type="submit" value="submit" name="submit" id="submit" tabindex="12">
+        <input class="btn btn-secondary" type="reset" value="reset" name="reset" id="reset" tabindex="13">
+      </div>
+    </form>
+
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src='js/app.js'></script>
+</body>
+</html>

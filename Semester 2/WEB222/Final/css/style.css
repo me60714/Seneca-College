@@ -1,0 +1,363 @@
+/**
+ * WEB222 – Final Assessment
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name: Wei-Chih Kao
+ *      Student ID: 158000190
+ *      Date: 2021.08.11
+ *
+ */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=WindSong&display=swap');
+
+:root {
+  --first-color: #303841;
+  --second-color: #00adb5;
+  --third-color: #eeeeee;
+  --fourth-color: #ff5722;
+  --fourth-color--light: #ff6537d7;
+}
+ 
+ * {
+   margin: 0px;
+   padding: 0px;
+}
+
+img {
+  width: 400px;
+}
+
+.container {
+  justify-content: center;
+  max-width: 1100px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px 100px;
+}
+  
+.top {
+  text-align: center;
+  background-color: var(--second-color);
+  padding: 60px;
+}
+
+.top #name {
+  font-family: 'Anton', sans-serif;
+  color: var(--first-color);
+  font-size: 78px;
+  margin: 5px 0px;
+}
+
+.top #title {
+  font-family: 'STIX Two Text', serif;
+  color: var(--first-color);
+  font-size: 30px;
+  margin: 5px 0px 40px 0px;
+}
+
+.button {
+  font-size: 1rem;
+  width: 120px;
+  padding: 10px;
+  background-color: var(--fourth-color);
+  color: var(--third-color);
+  border-radius: 30px;
+  display: inline-block;
+  margin: 5px 10px;
+  border: 1px solid var(--first-color);
+}
+
+.button:hover{
+  background-color: var(--fourth-color--light);
+  cursor: pointer;
+  border: none;
+}
+
+.button a {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+.button a:hover {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.infographic{
+  margin: 50px 50px;
+}
+
+h2 {
+  color: var(--second-color);
+  font-size: 30px;
+  font-family: 'Noto Serif TC', serif;
+  margin-bottom: 30px;
+}
+
+.academic_honesty {
+  color: var(--first-color);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 2.5rem;
+}
+
+.sign {
+  margin: 20px 0px;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.date {
+  margin: 20px 0px 5px 0px;
+  font-weight: 900;
+}
+
+.name {
+  margin: 20px 0px 5px 0px;
+  font-weight: 900;
+}
+
+.handwrite {
+  margin: 20px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-family: 'WindSong', cursive;
+}
+
+.basicInfo {
+  color: var(--first-color);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+  line-height: 2.5rem;
+  display: flex;
+  justify-content:space-around;
+}
+
+.question {
+  font-weight: 900;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.education {
+  background-color: var(--first-color);
+}
+
+.eduTitle {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  color: var(--second-color);
+  font-size: 3.5rem;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.education-cards {
+  padding: 0px 200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 50px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-color {
+  padding: 10px 0px;
+  background-color: var(--second-color);
+  color: var(--third-color);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.card-text-date {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card-text-degree {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card-info {
+  background-color: var(--third-color);
+  color: var(--first-color);
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 1.5rem;
+}
+
+.contactMe-title {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  color: var(--second-color);
+  font-size: 3.5rem;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.form {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.form label {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* @media only screen and (max-width: 992px) {
+  .education-cards {
+    padding: 0px 100px;
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .education-cards {
+      padding: 0px 50px;
+    }
+
+  .top #name {
+    font-size: 40px;
+  }
+
+  .name {
+    margin: 20px 0px 5px 0px;
+    font-weight: 300;
+  }
+
+  .handwrite {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .basicInfo {
+    font-size: 10px;
+    line-height: 2rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .academic_honesty {
+    font-size: 15px;
+    margin-bottom: 30px 5px;
+    line-height: 2rem;
+  }
+
+  .sign {
+    margin: 20px 0px;
+    display: flex;
+    justify-content:space-evenly;
+  }
+
+  .date {
+    margin: 20px 0px 5px 0px;
+    font-weight: 900;
+  }
+
+  .name {
+    margin: 20px 0px 5px 0px;
+    font-weight: 900;
+  }
+
+  .card-info {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .education-cards {
+      padding: 0px 30px;
+    }
+  .top #name {
+    font-size: 40px;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  .name {
+    margin: 20px 0px 5px 0px;
+    font-weight: 300;
+  }
+
+  .handwrite {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .basicInfo {
+    font-size: 10px;
+    line-height: 2rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .academic_honesty {
+    font-size: 15px;
+    margin-bottom: 30px 5px;
+    line-height: 2rem;
+  }
+
+  .sign {
+    margin: 20px 0px;
+    display: flex;
+    justify-content:space-evenly;
+  }
+
+  .date {
+    margin: 20px 0px 5px 0px;
+    font-weight: 900;
+  }
+
+  .name {
+    margin: 20px 0px 5px 0px;
+    font-weight: 900;
+  }
+
+  .card-info {
+    font-size: 1rem;
+  }
+}
