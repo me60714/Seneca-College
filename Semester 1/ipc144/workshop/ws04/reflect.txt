@@ -1,0 +1,18 @@
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+1.
+Parallel arrays provide us the ability to group related data. Using what you coded in this workshop, briefly explain how you linked related data for any given item in the dataset? What was the ‘key’ used to accomplish this?
+
+Parallel arrays is a convenient way to link related data. I put same type of value in the same identifier, so it easier to management and call the value. This is call an array. In this workshop, There are not only one but several arrays. The value in the same index of each of those arrays are related. I stored details about some items in different arrays,  for example, I have item one to five, and I created arrays that stored their priority, financed, and cost. The value in the different index in one array matches the same index in other arrays. The key is that it must have brackets [ ] when validation the value. The brackets identify the data structure as an array and size the array when it has number inside the brackets.
+
+2.
+Why do you think it is common practice to iterate arrays initializing the iterator variable to zero and not to a value of one? Justify your answer using an example from this workshop.
+
+That is because 'one' is actually the second value of the index. The first index is 'zero'. In this workshop, there are items one to five, and each items have their cost. Since the first index is 'zero', when we need to call the item 1's cost, we need to use cost[0]. Cost[1] means item 2's cost, cost[2] means item 3's cost, and so on.
+
+3.
+How would you describe conceptually what an array is to a child (5-8-year-old)? How would you describe accessing an element in the array? Warning: keep your explanation simple or the child will not understand.
+
+I would say that an array is like a basket which store same things. For example,  an array, apple[5], is a basket with 5 different apples. When we need to access an element in the array is like we take one of the apples out of the basket, take a picture of it, and put it back to the same position of the basket.
