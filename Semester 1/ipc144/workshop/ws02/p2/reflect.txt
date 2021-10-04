@@ -1,0 +1,43 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+1. Given the following C statements:
+
+	printf("10.10 = %.15lf\n", 10.10);
+	printf("10.12 = %.15lf\n", 10.12);
+	printf("10.15 = %.15lf\n", 10.15);
+
+	Briefly explain why 10.12 doesn't display the value expected?
+
+Computers use binary to store values. In a 64 bit binary system, it means there are 64 positions to put 0 or 1, so it can express integer from 0 to 2^64-1 concisely. However, even there are so many integers in this range, the amount of floating-point is infinite. To put all possibilities of floating-point in this range, we follow a standard called IEEE-754. If one float point can not be transferred completely to binary via the format of IEEE-754, an error between this floating-point in binary and this floating-point in decimal appears. This is why the output of the value "10.12" looks like "10.119999999999999". The exact value of 10.12 is different in binary and decimal.
+
+2. What are all the possible values that can be returned based on the following statements using the modulus operator (you may use a range to simplify your answer):
+
+	a) intValue % 2
+	b) intValue % 3
+	c) intValue % 100
+
+[2,3,100]=300
+(2^32/2-1)%300*300=2147483400
+
+So all  the possible values = 300+300(n-1), -7158278 =< n <= 7158278 ll n!=0
+
+-2147483400............,-600,-300,300,600,900,1200,1500,1800,..............2147483400
+
+
+3. Apply the modulus operator in the following situation:
+
+	You are hosting a party and you order 11 pizzas. Each pizza has 12 slices, and the average person eats 3 slices, and you expect 21 people at the party. 
+	How many pizza's will be completely consumed and how many extra slices will be needed to feed the expected number of guests?
+	What does the formula look like if you write it in the C language? Fill-in the missing parts (underscored):
+
+	int totalSlices = 11 * 12;
+	int estimatedSlicesConsumed = 21 * 3;
+	int wholePizzasEaten =  estimatedSlicesConsumed / 12 ; 
+	int extraSlicesNeeded = estimatedSlicesConsumed % 12 ;
+
+4. Briefly explain why it is often a best practice to convert floating-point values to integers when performing arithmetic operations?
+
+Because it is safer and more accurate to do arithmetic in integers. If we use floating-point values to do arithmetic, it appears errors since floating-point may shows different values between binary and decimal.
