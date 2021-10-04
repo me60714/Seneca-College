@@ -1,0 +1,17 @@
+Full name: Wei-Chih Kao
+Student Number: 158000190
+Email: wkao3@myseneca.ca
+Section Informaiton:ZAA
+
+
+1. What you have learned in completing this workshop
+
+In this workshop, I practiced how to code C language via Visual Studio, and become familiar with it gradually. Basically, I can code, edit and execute a simple and little program by myself now. Besides, I learned how to log in and transfer files to my Matrix account.
+
+2. Briefly describe what SSH is and how you used it in this workshop
+
+SSH(Secured Socket Shell) can let us connect to our Matrix account in a safe way. In this workshop, I use Microsoft Command Prompt to interact with Seneca's Linux server. By using specific commands, we can view and edit the file or the menu, and so on.
+
+3. Briefly describe what SFTP is and how you used it in this workshop
+
+SFTP(Secured File Transfer Protocol) is a kind of tool to transfer files in a safe way. We use WinSCP to transfer our assignments to the school's server safely and easily.
