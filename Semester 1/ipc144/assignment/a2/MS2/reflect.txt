@@ -1,0 +1,46 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+
+1. What is your favourite string function from the string library that you have used in this application? Describe why?
+
+Talk to my favorite string function, it must be "strcmp". I use strcmp solve the biggest problem I have faced in the milestone2. It is in the menuLoign, we need to limit the attempt time for user to login the system. Also, to enhance the safety, we need to make sure the user input the right information about account number, display name in side the system, and the password. It stock me when need to make sure all these three data above is correctly belong to one structure of data. After trying hundreds of times, I recall that this string function and try to use it. Afterward it work successfully as expected.
+
+
+2. List all the new function prototypes you added to this milestone. For each new function, briefly describe why you created it and include what module/library you put it in and why.
+
+Useful module such as pauseExecution I use heavily in these functions. It do save a lot of time for me. 
+
+(1). void displayTicketHeader(void);
+
+just like function displayAccountSummaryHeader, I create function displayTicketHeader to let my code clear. Since the program getting bigger, the codes gradually become mess. So it is a good way to make all code clear.
+
+(2). void displayTicketDetail(const struct Ticket *tickets, int size_Ticket, const struct Account *accounts, int size_account, int activeornew);
+
+This is a combine function of function displayTicketHeader and function displayOneTicketDetail. Actually, I create this function first, but it is looks still too fat. So I create the above two functions.
+
+(3). void displayMessageHeader(const struct Ticket *tickets);
+
+Similar with the function displayTicketHeader, it can just let the code look more clear and more readable.
+
+(4). void displayMessageContent(const struct Message *messages);
+
+Similar with the function displayTicketDetail, but use to display the information of message.
+
+(5). void displayOneTicketDetail(const struct Ticket *tickets, const struct Account *accounts, int size);
+
+This function is part of function displayTicketDetail, and it use to display single ticket data.
+
+(6). int findTicketByNum(int num_ticket, const struct Ticket *tickets, int size_Ticket);
+
+This function is similar with the function findAccountIndexByAcctNum, I create this function to search specific ticket in the ticket array.
+
+(7). void displayCustomerTicketHeader(void);
+
+This function is use to display the title of customer ticket data.
+
+(8). void displayCustomerTicketList(const struct Ticket *tickets, int size_Ticket, const struct Account *customer_account);
+
+This function displays the information of customer ticket data.

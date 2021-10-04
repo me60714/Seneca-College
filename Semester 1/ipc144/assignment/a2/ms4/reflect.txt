@@ -1,0 +1,55 @@
+Name: Wei-Chih Kao
+ID: 158000190
+Email: wkao3@myseneca.ca
+Section: ZAA
+
+
+1. NOT including the mandatory functions stated in the specifications from Assignments 1 and 2, LIST all the functions (use the prototypes) you created. Categorize them by module/library in the following sequence (if you did not create any functions for a given module/library, simply state "None developed"):
+
+a) commonHelpers.h
+int passwordsecurity(char *string);
+int whitespace(char *string);
+
+b) account.h
+void updateAccount(struct Account *account);
+void updateUserLogin(struct UserLogin *userlogging);
+void updateDemographic(struct Demographic *demo);
+int loadAccounts(struct Account accounts[], int maxSize_account);
+int archivingRemovedAccounts(struct Account *accounts, int maxSize_account, const char accountfilename[]);
+int totalArchivingAccounts(struct Account accounts[], int maxSize_account, const char accountfilename[]);
+int saveaccounts(struct Account accounts[], int maxSize_account, const char accountfilename[]);
+
+c) ticket.h
+int findTicketByNum(int num_ticket, const struct Ticket *tickets, int size_Ticket);
+void displayCustomerTicketHeader(void);
+void displayCustomerTicketList(const struct Ticket *tickets, int size_Ticket, const struct Account *customer_account);
+int displayNewTicketTitle(struct Ticket *new_ticket, int maxsize_ticket);
+void modifyticket(struct Ticket *tickets, int maxsize_ticket, int customeraccount, const struct Account *customer_account, int maxsize_account);
+void displayCloseTicketDetail(const struct Ticket *tickets, int size_Ticket, const struct Account *accounts, int size_account, int activeornew);
+void displayActiveTicketDetail(const struct Ticket *tickets, int size_Ticket, const struct Account *accounts, int size_account, int activeornew);
+void ticketManagement(struct Ticket *tickets, int maxsize_ticket, const struct Account *customer_account, int maxsize_account, int num_agentaccount);
+int saveTickets(struct Ticket *tickets, int maxSize_ticket, const char ticketfilename[]);
+int archivingClosedTickets(struct Ticket *tickets, int maxSize_ticket, const char ticketfilename[]);
+int loadTickets(struct Ticket *tickets, int maxSize_ticket);
+int totalArchivedTickets(struct Ticket *tickets, int maxSize_ticket, const char ticketfilename[]);
+int countArchivedMessages(struct Ticket *tickets, int maxSize_ticket, const char ticketfilename[]);
+
+d) accountTicketingUI.h
+int findAccountIndexByAcctNum(int num_account, const struct Account account[], int maxSize_account, int promptornot);
+void displayAllAccountSummaryRecords(const struct Account account[], int maxSize_account);
+void displayAllAccountDetailRecords(const struct Account account[], int maxSize_account);
+void pauseExecution(void);
+
+
+2. Identify two (2) major components (features) from the assignment that you enjoyed developing and detail why you found it enjoyable. Your answer must be at least 200 words but no more than 300.
+
+The first component from the assignment that I enjoyed is the process to figure out the logic of the code. For a same problem, maybe there are many logics or ways to answer it. However, some answers are time-consuming, some answers need longer code and some code of the answers just looks ugly. Therefore, to find a proper logic of the problems is what I enjoy in developing the programs.
+
+The Second component from the assignment that I enjoyed is the sense of accomplishment after finishing a part, a logic or whole program. I work hard on the assignment, when I see the code from empty to several lines, hundreds of line, or even so many files. It just like building a house, or raising a baby. Watching they grow up, become stronger and completed. That feeling is just amazing and so proud. Thus, this is why I enjoyed the sense of accomplishment after finishing coding.
+
+
+3. Identify two(2) major components (features) from the assignment that you disliked developing and detail why you found it so unlikable. Your answer must be at least 200 words but no more than 300.
+
+The first, and the most component from the assignment that I disliked the most is definitely the process of upload our assignments. That is because when we need to upload, we need to input every value by our own. When the program is small, it is fine. Nevertheless, when the program become huge, it become time-consuming and easy to type wrong. Once you type wrong, you can not go back. Therefore, not only type the values to confirm our programs waste a lot of time, but very annoying for the programmer. Besides, any of little format kind of wrong are not allow, it always drive me crazy because of those little mistake. Hence, this is the reason that why I disliked the process of upload our assignments most.
+
+The second components from the assignment that I dislike is the time. Although there were several days to finish the each milestone of the assignment and it seems enough, there are too many other conditions. So the time is just too short. Each milestone are just too big, and I need several hours to fix an error. Not even mention that I need to read the instruction first, and finish the code, then start trying to fix the mistake or bug. Moreover, I still need several hours to just upload the program and to fit the standard output 100% for sure. Therefore I have to stay up whole night for this assignment almost everyday before the deadline. Although there are some funny and enjoyed part during the assignments, I still feel very tired and exhausted when working on it. Besides, if I have enough time to do it, I think I can do better. Thus, this is why I think the time period of the assignment is too short, and I do not like it.
