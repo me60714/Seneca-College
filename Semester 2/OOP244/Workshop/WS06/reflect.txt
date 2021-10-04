@@ -1,0 +1,43 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.07.09            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In this workshop, I practice several skills and concept. The goal of this workshop is to complete the TextFile module. This module can read the text files from the hard drive and load the content of the text files to the array of class Lines. Also, this module can display the content by pages.
+
+To read the text files properly, I overload the operator << and >>, and practice the use of istream and ostream. For example:
+
+	std::ostream &operator<<(std::ostream &ostr, const TextFile& text) { return text.view(ostr);}
+	std::istream &operator>>(std::istream &istr, TextFile& text) { return text.getFile(istr); }
+
+And to read text files correctly, I practice file IO by using ifstream and ofstream in the function loadText() and SaveAs(). Besides, a textFile can be safely copied and safely assigned. To do so, I followed the rule of 3 and create the destructor function, copy constructor, and copy assignment operator. For example:
+
+	~TextFile();
+	TextFile(const TextFile&);
+	TextFile& operator=(const TextFile&);
+
+During this workshop, I face some questions. When I try to run the code, I output was almost right. However, there are some memory error. So, I read the error message, it said, "pointer being freed was not allocated". Therefore I walk through the code and fine in which part I deallocated more than once. It took some times but it's a good way to find errors. One more problem is when I try to submit, there are memory error again. The error message is "Invalid write of size 1" at function setFilename. So I try to figure it out. My code was like:
+
+   void TextFile::setFilename(const char *fname, bool isCopy)
+   {
+      if (!isCopy)
+      {
+         delete[] m_filename;
+         m_filename = new char[strLen(fname)+1];
+         strCpy(m_filename, fname);
+      }
+      else if (isCopy)
+      {
+         delete[] m_filename;
+         char copy[20] = "C_";
+         m_filename = new char[strLen(fname)+1];
+         strCat(copy, fname);
+         strCpy(m_filename, copy);
+      }
+   }
+
+I read every line carefully and finally I found in these two case, I allocate m_filename for the length of "strLen(fname)+1", but if the file is copy, it will have two more characters "C_" in the front. Therefore, I change the second case's length to "strLen(fname)+3", and the code become correct!

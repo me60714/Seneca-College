@@ -1,0 +1,14 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.07.20            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In this workshop, I practice the skill of virtual functions in inheritance. I created Shape module, which has a Shape class inside and it is an interface, an abstract base class with only pure virtual functions. It has two pure virtual functions: draw and getSpecs. Besides, its destructor is also virtual.
+
+Other than Shape module, I also created LblShape module, Line module and Rectangle module. LblShape module is based on Shape module and Line module and Rectangle module have concrete class Line and Rectangle inside and they are based on LblShape module. The goal of this workshop is to make lines and rectangles.
+
+While doing this workshop, I noticed that although I do the workshop successfully, I cannot complete the workshop without instructions. That is, if the instruction did not make those module for us, I have no idea how to separate the work into different module with base classes and concrete classes. It's hard to design these kind of things before doing any projects. Therefore, I think it will be a good practice to think carefully and deeply before doing any projects.

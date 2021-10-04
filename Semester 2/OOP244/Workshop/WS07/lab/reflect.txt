@@ -1,0 +1,13 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.07.14            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+
+In this workshop, I practiced the concept of derived classes and I/O operators. I have a base class named MotorVehicle which contain basic attributes like plate number, built year and address. Also, to reduce redundant code, I created a derived class named Truck which contain each tuck's current load and max load. In addition to the hierarchy of these class, I also created shadow functions of input and output operators for them.
+
+In the MotorVehicle module, I have function ostream &write(ostream &os) const and istream &read(istream &in) to input and output the data. In the Truck module, I also have similar functions like ostream& Truck::write(ostream &os) const and istream& Truck::read(istream &in), therefore, for the purpose of reduce code, I shadowed the two member functions in the base class (MotorVehicle) within the derived class member function (Truck). I also do the similar thing to the operators helper functions. (operator<< and operator>>).
