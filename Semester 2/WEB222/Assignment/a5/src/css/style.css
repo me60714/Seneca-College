@@ -1,0 +1,140 @@
+/**
+ * WEB222 – Assignment 05
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name: Wei-Chih Kao
+ *      Student ID: 158000190
+ *      Date: 2021.08.05
+ *
+ */
+
+/* Header */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#hero {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#hero > img {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+}
+
+.quote {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Wildlife Observations Map */
+#map-container {
+  height: 450px;
+  width: 100%;
+}
+
+.marker-text {
+  text-align: center;
+}
+
+/* Wildlife Observations Table */
+.buttons {
+  text-align: center;
+  margin: 2em;
+}
+.buttons > button:hover {
+  background-color: lightblue;
+}
+
+/* td {
+  vertical-align: middle;
+} */
+
+time {
+  background: inherit;
+}
+
+/* legend */
+#legend {
+  display: flex;
+  text-align: center;
+  margin: 20px;
+  justify-content: space-around;
+}
+
+#legend span {
+  font-size: 1rem;
+}
+
+/* cards */
+
+#observation-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  height: 515px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-img {
+  height: 375px;
+  width: 375px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-body {
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-body a {
+  color: black;
+}
+
+.card-body h3 {
+  font-size: 1.8rem;
+  margin: 5px;
+}
+
+.card-body h4 {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+
+.card-icons i {
+  padding: 0px 15px;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: right;
+}
