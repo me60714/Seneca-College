@@ -1,0 +1,14 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.06.28            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In the workshop 5, I learned how to create and define binary member operator, type conversation operator and unary member operator. Besides, I know how to use helper binary operator between classes or between a primitive type and a class properly.
+
+In the lab part, I complete a Account module which is a simple bank system. It needs to be able to do the basic things such as depositing money or withdrawing money. To do so, I overload the += operator to add a double value to an account balance and overload the -= operator to reduce an account balance by a double value. (Account& operator+=(double money)and Account& operator-=(double money)). Besides, I create type conversion operators to simplify my code and make it clear and easier to read.(operator bool() const, operator int() const and operator double() const). Moreover, to move funds between accounts, I overload the << and >> operators, this make the code more readable that I want to move from which account to which account. (Account& operator<<(Account& acc) and Account& operator>>(Account& acc)).
+
+In the DIY part, I used similar concept to build a simple mark module. I think the most problem is the syntax. The syntax of overload operators are quite different from the syntax we familiar with. Therefore, sometimes it is easier for me to get confuse. 

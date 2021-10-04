@@ -1,0 +1,14 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.06.19            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In the workshop #4, I learn and practice how to define constructors no matter it is a default constructor or custom constructors with different arguments. Also, define a destructor is important after define constructors. Because we always want to prevent memory leaks. Besides, I familiar with the usage of the reference of the current object via this workshop.
+
+For example, in the DIY part, I created three different constructors for the class Label. One is default constructor with no argument(Label()), another is one argument constructor(Label(const char* frameArg)), the other constructor has two arguments(Label(const char* frameArg, const char* content)). Also, I did not forget to create the destructor(~Label()) in case of memory leaks. Besides, in the lab part, I created some functions which return the reference of the current object. This is new for me, so it took me some time to adapt this new syntax. For instance, the function "Canister& setContent(const char* contentName);" has a return type of "Canister&", which return the current used object and the syntax inside the function is "return *this;".
+
+I face some issues during this workshop. In the DIY part, we are asked to create labels and format them properly. This means there is a lot of use with cout and cin. Thus, it forces me to practice them a lot. However, the problem that stuck me the most is I don't know how to set the content in the middle of the label. In the class, we learned how to format the content to the left or the right, but not taught about set to middle. After searching on the Internet and still no way to do so, I found in the case of this workshop, the length of our labels can change with the content. Therefore, the space before and after the content is always one white space. So that I can easily format them. Even though they are not fixed, the way that I figure out is to let the length of the label minus the length of the content, then divided by 2, then I can get the space. I'm not sure if there is an easier way or we already have a library to do so.

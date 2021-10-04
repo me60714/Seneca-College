@@ -1,0 +1,14 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.06.12            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In the workshop #3, I learned and practiced new concept of C++. I learned how to define a class type with private data and method. Also, I practiced to use object in this workshop. A class is a new thing in the C++, it seems like struct in C. However, after the lecture during the class and practicing this workshop, I can understand the different between the struct and the class.
+
+For example, I created Item file and Bill file to define classes inside. Inside the classes, I created some private variables and some public methods. Besides, I created an object of class Item in the class Bill, so I can access data from class Item to class Bill through public member functions. Moreover, I learned and practiced how to format data by using member functions in the cout object. Such as cout.setf, cout.width, cout.fill...etc. This is a useful tool since it can use in everywhere.
+
+During this workshop, I faced some problems and errors. For instance, I had a segmentation fault when I testing my code. At the end I found the reason is because in my m_itemName variable, a char array, I forgot to put a null character in the end of the array. So, that why I pass the itemtester, but fail in the final test.

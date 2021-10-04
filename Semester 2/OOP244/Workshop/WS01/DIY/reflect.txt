@@ -1,0 +1,12 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.05.28            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+During this workshop, in the part one we need to split the code into different small modules. Each module has its respective meaning. So, instead of a big, long and complex code which may hard to read or understand, we can have several different modules, which are smaller, neater and more readable. The benefit of doing this is if we need to share our code to others or if we need to work with others, it's easier for people to understand others' code. Besides, it's more convenient to modify the code and maintain the program. Before working on the part one, I never learn about C++, however, I become familiar with the logic and syntax of the C++ though this workshop. Basically, in the part one, we just need to follow the instruction than can easily complete it.
+
+In the part two of this workshop, we need to code seven functions which we have learned by C in the IPC144. However, we need to use C++ to code them, and we cannot use any libraries. So, this is a good practice for us and we can also simply review the C language. This part is more challenging and cost more time to figure it out. It need more thinking and test. But it also let us become more familiar with C++.

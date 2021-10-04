@@ -1,0 +1,18 @@
+///////////////////////////////////////
+//    Name   : Wei-Chih Kao          //
+//    Email  : wkao3@myseneca.ca     //
+//    ID     : 158000190             //
+//    Date   : 2021.06.05            //
+///////////////////////////////////////
+
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In workshop #2, I have learned some new concepts and skills about C++. Besides, I also review some old things that I learned in the previous course which is IPC144.
+
+In the lab part and DIY part, we need to load and read a file. For example, I created a File module (File.h and File.cpp) which contains all the functions regarding the process of the file. Such as openFile, closeFile and read. This skill we learned in the IPC144 before, and we review this skill in this workshop. Besides, I used a cstring module that I created in the previous workshop for C-style strings without using any library function. Such as strLen and strCpy. 
+
+The main point of workshop #2 is dynamic memory. During this workshop, I learn and practice how to allocate and deallocate dynamic memory for arrays. This is a new concept for me, so at first, it took me some time to understand it. However, after the professor's clear instruction and exercises, I can smoothly use it in this workshop. Also, a new thing I never learn before is overload functions. It means a function can carry multiple meanings depending on the number of arguments and types of arguments. Such as the read functions. In the lab part of this workshop, my read function has three overloadings, one is to read integers, one is to read double float points, and one is to read character strings.
+
+Although I do encounter some problems during this workshop, I figure them out eventually. At first, I have a segmentation fault while I run my code. My solution is to find the part which causes a segmentation fault. I used cout to print some messages to locate the code. Then I found the problem is my read function. In each of my read functions, I need to scan only one piece of information, either string or integer. However, I have had scanned the whole line of the file. Therefore, I got a segmentation fault.
+
+To sum up, after this workshop, I learn how to allocate and deallocate dynamic memory and how to use overload functions.

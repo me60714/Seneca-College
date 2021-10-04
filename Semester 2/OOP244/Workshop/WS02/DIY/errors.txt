@@ -1,0 +1,7 @@
+Population.cpp: In function ‘bool sdds::load(sdds::PopulationOfCa&)’:
+Population.cpp:29:34: error: ‘strlen’ was not declared in this scope
+             int len = strlen(code) + 1;
+                                  ^
+Population.cpp:32:44: error: ‘strcpy’ was not declared in this scope
+             strcpy(oneArea.postalCode, code);
+                                            ^
