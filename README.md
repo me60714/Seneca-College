@@ -10,7 +10,7 @@ ULI101 - Linux, Bash scripts
 
 2nd Semester  
 ---------------
-OOP224 - C++ language
+OOP224 - C++ language  
 WEB222 - JavaScript, HTML, CSS  
 WEB222 - Project: https://me60714.github.io  
 DBS211 - Oracle DBMS  
