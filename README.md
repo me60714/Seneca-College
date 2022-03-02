@@ -2,13 +2,13 @@
 
 2021.01 - Present
 
-1st Semester  
+1st Semester  --  GPA 4.0 President's Honour  
 ---------------
 IPC144 - C language  
 ULI101 - Linux, Bash scripts  
 
 
-2nd Semester  
+2nd Semester  --  GPA 4.0 President's Honour  
 ---------------
 OOP224 - C++ language  
 WEB222 - JavaScript, HTML, CSS  
@@ -16,7 +16,7 @@ WEB222 - Project: https://me60714.github.io
 DBS211 - Oracle DBMS  
 
 
-3rd Semester  
+3rd Semester  --  GPA 3.8   
 ---------------
 OOP345 -  Multi-threading, containers, inheritance hierarchies and polymorphism in C++  
 WEB322 -  JavaScript, HTML, CSS, Express.js, Handlebars.js, Mongo DB  
