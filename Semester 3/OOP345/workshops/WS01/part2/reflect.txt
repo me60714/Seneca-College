@@ -1,0 +1,16 @@
+Name		: Wei-Chih Kao
+Email		: wkao3@myseneca.ca
+StudentID	: 158000190
+Date		: 2021.09.15
+
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+Reflection:
+
+In this workshop, I practiced how to receive arguments from command line. This is the first time that I learned that we can actually have arguments in the main function. Besides, I learned the difference between the external linkage and the internal linkage.
+
+First, the keyword of external linkage is "extern". By using this, we can connect two variables that are in different scopes and also in different modules. Take my code as an example, I declared a variable using "extern" in my file "event.h": "extern unsigned int g_sysClock;" and I also declared a same name variable in another file "event.cpp": "unsigned int g_sysClock = 0;". By doing so, I can access this variable in the different modules. And also int the "main.cpp" file.
+
+Moreover, the keyword of internal linkage is "static". By using this, we can connect two variables in different scopes but same module. In my code, I used this in the display function, I declared "static unsigned int counter = 0;". Therefore, the variable "counter" won't be re-initiated every time the function been called.
+
+Speaking of the upgrade that I made in the event class, first, to let the string accept any length, I use dynamic memory allocation("char* description = nullptr;") instead of gave the variable a solid length ("char description[128];"). Second, to avoid memory leak, I added some functions. Such as copy constructor(Event(const Event&);), destructor("~Event();") and copy assignment operator function("Event& operator=(const Event&);").
