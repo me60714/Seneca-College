@@ -1,0 +1,32 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021.10.07
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+
+In this workshop, I learned how to code classes that have composition and aggregation relationships, use string functions to change strings, and manages a dynamically allocated array of pointers to objects.
+
+The difference between the implementations of a composition and an aggregation is that a composition has a relationship of "has-a" between its classes. It implements complete ownership. The composer object will destroy its component objects not after its own destruction. In this workshop, a example of a composition relationship is the Restaurant module with the Reservation module. The Restaurant class has a pointer to the Reservation object.
+
+    class Restaurant
+    {
+        Reservation* m_reservation{};
+        size_t m_resNum{};
+    public:
+        ...
+        ...
+    };
+
+Compare to the composition, an aggregation does not need to manage the creation or destruction of the objects it used. Aggregation is more flexible than composition. An example from this workshop is the ConfirmationSender module to the Reservation module, where ConfirmationSender can have none or many Reservation members and Reservation can exist without ConfirmationSender.
+
+    class ConfirmationSender
+    {
+        const Reservation** m_reservation{};
+        size_t m_resNum{};
+    public:
+        ...
+        ...
+    };
+
+The difference between the implementations of move and copy functions in a composition and an aggregation is that in a composition relationship, the copy and move functions will destroy its resources. While in an aggregation relationship, the copy and move functions will destroy the pointer, not the resources.
