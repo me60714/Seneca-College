@@ -1,4 +1,4 @@
-# Seneca College -- Computer Programming & Analysis
+# Seneca College -- Computer Programming
 
 2021.01 - Present
 
