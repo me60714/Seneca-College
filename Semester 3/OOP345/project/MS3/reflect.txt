@@ -1,0 +1,15 @@
+// Name: Wei-Chih Kao
+// Seneca Student ID: 158000190
+// Seneca email: wkao3@myseneca.ca
+// Date of completion: 2021.12.03
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+
+In this project, I practice developing a project of an assembly line with work stations contains a set of stock items. In the milestone 1, I created Utilities and Station modules. Utilities module is basically deal with string from input files. Station module handles stations. A Station object handles a specific item in order to fill customer orders.
+
+In milestone 2, I created CustomerOrder module. The purpose of this module is to process all the customer orders as they move from one station to another. A CustomerOrder object manages a single order. I implement the rule of five to this module. But in this module, copy operations are not allow, therefore I throw an error message once the copy constructor be called. Besides, I set the copy assignment to delete and use "noexcept" in move constructor and move assignment in order to promise that it won't throw exceptions.
+
+In milestone 3, I created Workstation and LineManager modules. The Workstation module including three double-ended queues of CustomerOrder and the Workstation class. The queues hold the orders at both ends of the line. A Workstation object is to fill customer orders with items, so the object cannot be copied or moved. Therefore, I also set the move and copy operators to delete. The LineManager module manages an assembly line of active stations.
+
+To sum up, this project is a complex application. I practice almost everything I learned from this course, rule of five, lambda function, containers and so on. Not sure if I understand everything on this course, but what I sure is I do learn a lot from it.
