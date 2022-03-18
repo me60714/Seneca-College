@@ -1,0 +1,65 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021.10.13
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+
+During this workshop, I learned how to design and code function object and lambda expression, code member function that receives the address of a callback function to execute, perform error handling by throwing exceptions of different types and distinguish exception types from one another.
+
+--
+// The difference between the implementations/utilizations of a functor and a lambda expression. When is appropriate to use each one?
+--
+
+A function object is also called a functor. In C++, we can define a functor as the class of which function objects are instantiated. It is a class which defines the operator().The implementation of functor in this workshop:
+
+ void SpellChecker::operator()(string& text)
+    {
+        size_t found = 0;
+        for (size_t i = 0; i < SIZE; i++)
+        {
+            while ((found = text.find(m_badWords[i])) != string::npos)
+            {
+                text.replace(found, m_badWords[i].length(), m_goodWords[i]);
+                m_replace[i]++;
+            }
+        }
+    }
+
+A function object that only used in a local area of an application can be represented by a lambda expression. A lambda expression does not require an identifier and is shorthand for a function object. A lambda expression is more convenient to define an anonymous function object at the location where it is invoked or passed as an argument to a function. Moreover, lambda expression is more readable. The implementation of lambda in this workshop:
+
+auto fixPrice = [&](Book& book)
+		{
+			if (book.country() == "US")
+			{
+				book.price() *= usdToCadRate;
+			}
+			else if (book.country() == "UK" && book.year() >= 1990 && book.year() <= 1999)
+			{
+				book.price() *= gbpToCadRate;
+			}
+			return book.price();
+		};
+
+
+
+--
+// The constructor for SpellChecker generates an exception in certain conditions. How would you change your code to achieve the same result, but without exceptions (both on the constructor and on the client side)? Compare the two solutions.
+--
+
+The constructor in the SpellChecker generates an exception if the file name (the parameter of the constructor)  does not exist. In this workshop, we use throw to check if there is any exceptions. Without using this, We can also use abnormal exists which are std::terminate() and std::abort().
+
+
+--
+// The classes Movie and Book contain almost identical logic in loading data from the file. How would you redesign the classes in order not to duplicate that logic?
+--
+
+In order to avoid duplication coding in Movie and Book classes, I can design an abstract class and let both Move and Book derived by it. Therefore I can avoid the duplication logic.
+
+--
+// The classes Movie and Book are instantiated from the main() function using a custom constructor, but they also contain a default constructor. Is the default constructor necessary? Could you remove it? Justify your answer.
+--
+
+Although there are custom constructor for both Movie and Book, the default constructors are absolutely necessary. The reason is in case the custom constructor does not work. If so, the member variables will not be initialized and will lead the program to crash.
+
+
