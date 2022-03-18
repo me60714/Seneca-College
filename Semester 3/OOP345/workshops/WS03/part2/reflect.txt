@@ -1,0 +1,60 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021.10.02
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+--
+// Why we do not split a module into *.h and *.cpp like you did in the previous workshops.
+--
+
+That is because we use template classes in this workshop. We can't separate the definition of template classes from their declaration to .cpp files. When instantiating a template, the compiler creates a new class with the given arguments. Therefore, if the implementations were not in the header, they wouldn't be accessible, and the compiler wouldn't be able to instantiate the template.
+
+--
+// What "=initial" in the prototype means.
+--
+
+It's a default argument of the function "PairSummable(const K& key, const V& value = initial) : Pair<V, K>(key, value)". It allows the function be called without the "value" argument. If the function be called with the value argument providing, then the value will equal to the argument provided	, if not, the value will equal to the value of initial.
+
+--
+// The reason for specializing the operator+=() member function.
+--
+
+Sometimes we need to define an exception to a template definition of that function. For the operator+=() member function, when it comes to the type of integer, we want it to add up. So I code like:
+
+        PairSummable<V, K>& operator+=(const PairSummable<V, K>& src)
+        {
+            *this = PairSummable(this->key(), this->value() + src.value());
+            return *this;
+        }
+
+However, when the template type is string, we want the function can be able to separate arguments, therefore, I specializing it and code like:
+
+    template <>
+    PairSummable<std::string, std::string> &PairSummable<std::string, std::string>::operator+=(const PairSummable<std::string, std::string> &src)
+    {
+        if (value() == "")
+        {
+            *this = PairSummable(this->key(), src.value());
+        }
+        else
+        {
+            *this = PairSummable(this->key(), this->value() + ", " + src.value());
+        }
+        return *this;
+    }
+
+--
+// Why we don't need to specialize the initial value for the summation.
+--
+
+Because the type is template, so we don't need to initial the value, we let the compiler decide it.
+
+--
+// The reason for defining the class variable outside the class definition.
+--
+
+Because we want the variable to be static. We can have lots of PairSummable classes, but there is only one variable of "initial" and one variable of "m_MinWidth". All the classes share the same static variables.
+
+
+
