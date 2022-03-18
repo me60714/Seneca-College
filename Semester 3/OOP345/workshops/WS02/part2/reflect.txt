@@ -1,0 +1,13 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021.09.24
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In this workshop, what we did is to compare the time cost between copy operations and move operations. To do so, we practice using the "std::chrono" library. Also, we learned the concept and practice using move operations as well.
+
+First, at part 1 of this workshop, the point is to familiar with the "std::chrono" library. In the TimedEvents module, I have start_time and end_time, which are objects of type "std::chrono::steady_clock::time_point". And the functions startClock() and stopClock() set the time to that moment the function been called by let them equal to "std::chrono::steady_clock::now()". Besides, the struct Event stores the information about the event name and the duration of the event. To get the duration time, I basically just let end_time minus start_time, and cast the type to nanoseconds. ("auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time)") in this part, I also dynamically allocated a big string array to store records from text file, and measure the time for each event.
+
+At the part 2, I added one move constructor and one move assignment operator to see what is the difference between copy operations and move operations. As professor demoed on the lecture, using move operations would faster then using copy operations. the reason for the different duration time between them is because copy operations will copy everything and allocating new memory, move operations are more simply, just copy the addresses of the source.
+
+Therefore, it is more efficient to use move operations than copy operations if we no longer need the source objects.
