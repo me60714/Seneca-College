@@ -1,0 +1,40 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021. Nov. 27.
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+1.Why was necessary to use binary files in this workshop and how did you use them?
+
+The reason that we use binary files is because binary assess let us save the memory without any lost of information. Besides, binary access transfers data without any formatting including conversion, insertion, extraction of record or field separators. Therefore, the program can be faster. The code that I used in this workshop is:
+-- for writing --> std::ofstream wfile(file, std::ios::out | std::ios::binary);
+-- for reading --> std::ifstream rfile(file, std::ios::in | std::ios::binary);
+
+2.Why would be important to bind a function to its arguments, and how was it useful in this workshop?
+
+Bind() is important when need to modify the arguments of a function. It can manipulate the number and position of the function. The code that I used bind() in this workshop is:
+
+	for (size_t i = 0; i < threads; i++)
+		{
+			t[i] = thread(bind(converter, (text + part * i), key, part, Cryptor()));
+			t[i].join();
+		}
+
+3.The advantages of using multiple threads, and how did you accomplished multi-threading in this workshop?
+
+The advantages of using multiple threads can speed up the program by distributing independent tasks across separate hardware threads. To do so, I used thread class and blind() in this workshop. The code is like:
+
+void SecureData::code(char key)
+	{
+		
+		const int threads = 4;
+		int part = nbytes / threads;
+		thread t[threads];
+		for (size_t i = 0; i < threads; i++)
+		{
+			t[i] = thread(bind(converter, (text + part * i), key, part, Cryptor()));
+			t[i].join();
+		}
+
+		encoded = !encoded;
+	}
