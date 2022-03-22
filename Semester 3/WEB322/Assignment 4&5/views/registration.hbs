@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='/main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>LiveFit--registration</title>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/homepage" title="LiveFit"><img src="/livefit_logo.png"></a>
+                </div>
+
+                <!--Navigation bar-->
+                <ul class="menu">
+                    <li>
+                        <a href="/homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="/mealpackage">Meals Package</a>
+                    </li>
+                    <li>
+                        <a href="/registration">Registration</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero section-->
+    <section class="hero2">
+        <div class="hero-img2">
+            <img src="/hero-leftimage2.png">
+        </div>
+        <div class="words2">
+            <h1>
+                <P>Registration</P>
+            </h1>
+        </div>
+    </section>
+
+
+    <!-- registration-->
+    <div id="form">
+
+        <form id="form-registration" method="POST" action="/registration">
+            <h2>Create an account</h2>
+            <div id="registration-link">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <p id="line">--------------------- OR ---------------------</p>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" value="{{firstName}}" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value="{{lastName}}" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" value="{{phone}}">
+            <div class="invalid-feedback">
+                Please enter a valid phone number.
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{email}}">
+            <div class="invalid-feedback">
+                Please enter a valid email.
+            </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="{{password}}" required>
+
+            <input id="submit" type="submit" name="submit" value="SIGN UP"><br>
+
+        </form>
+
+    </div>
+
+
+    <!-- footer-->
+    <hr style="border:none solid gray;">
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-text">
+                <div class="footer-text-header">About Livefit</div>
+                <div class="footer-text-content">
+                    <a href="#">Affiliates</a>
+                    <a href="#">Gift Card</a>
+                    <a href="#">First Responders</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Help & Support</div>
+                <div class="footer-text-content">
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Our Menu</div>
+                <div class="footer-text-content">
+                    <a href="#">All Journeys</a>
+                    <a href="#">Grocery</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-media">
+            <hr style="border:none solid gray;">
+            <div class="footer--">
+                <div class="footer-right">© 2021 LiveFit North America Inc.</div>
+                <div class="footer-link">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src='js/registration.js'></script>
+</body>
+
+</html>
