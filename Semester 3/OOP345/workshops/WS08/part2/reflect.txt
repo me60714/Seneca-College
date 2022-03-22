@@ -1,0 +1,77 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021. Nov. 19.
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+1.the advantage that smart pointer syntax provides. Use example from your code to support your explanation.
+
+The advantage of using smart pointer is that smart pointer can avoid memory leaks. Because it will manage deallocation for the objects automatically at the destruction time.
+
+In part one of this workshop, we used raw pointers to create a product list. When the function validate() detect the price of the product < 0, then the program will throw an error message. However, the object will not be deleted since we used raw pointers and therefore the program did not even go through the delete part if any error message been throw. My code of using raw pointers to create a product list:
+
+List<Product> mergeRaw(const List<Description>& desc, const List<Price>& price) {
+		List<Product> priceList;
+		
+		for (size_t i = 0; i < desc.size(); i++)
+		{
+			for (size_t j = 0; j < price.size(); j++)
+			{
+				if (desc[i].code == price[j].code)
+				{
+					Product* p = new Product(desc[i].desc, price[j].price);
+					p->validate();	// validates the Product
+					priceList += p; // adds it to its list
+					delete p;
+					p = nullptr;
+				}
+			}
+		}
+		return priceList;
+	}
+
+In the part two, we use smart pointers to create product list. When using smart points, we don't need to delete the objects manually, since the smart pointer will call the destructor of its object. My code of using smart pointers to create a product list:
+
+List<Product> mergeSmart(const List<Description>& desc, const List<Price>& price) {
+		List<Product> priceList;
+
+		for (size_t i = 0; i < desc.size(); i++)
+		{
+			for (size_t j = 0; j < price.size(); j++)
+			{
+				if (desc[i].code == price[j].code)
+				{
+					std::unique_ptr<Product> p {new Product(desc[i].desc, price[j].price)};
+					p->validate();
+					priceList += p;
+				}
+			}
+		}
+		return priceList;
+	}
+
+2.the difference between raw and smart pointer syntax in your solution.
+
+To overload the += operator with a raw pointer, the syntax be like:
+
+	void operator+=(const T* raw)
+		{
+			list.push_back(*raw);
+		}
+
+To overload the += operator with a smart pointer, the syntax be like:
+
+	void operator+=(const std::unique_ptr<T>& smt)
+		{
+			list.push_back(*smt);
+		}
+
+To create a new object with a raw pointer, the syntax be like:
+
+	Product* p = new Product(desc[i].desc, price[j].price);
+
+To create a new object with a smart pointer, the syntax be like:
+
+	std::unique_ptr<Product> p {new Product(desc[i].desc, price[j].price)};
+
+The difference is that I use std::unique_ptr to indicate the smart point.
