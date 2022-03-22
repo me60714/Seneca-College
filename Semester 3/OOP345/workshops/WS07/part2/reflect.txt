@@ -1,0 +1,97 @@
+// Name: Wei-Chih Kao
+// Email: wkao3@myseneca.ca
+// StudentID: 158000190
+// Date: 2021.Nov.10
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+
+- List all the STL functions that you have used in this workshop; explain your reasoning for choosing each one, and not another.
+
+1.for_each()
+I used for_each() in the function "void SongCollection::display(std::ostream& out) const". for_each() can basically do the same thing what for loop can do. In here, I used for_each() to loop through the m_songcollection vector and output each songs inside.
+
+std::for_each(m_songcollection.begin(), m_songcollection.end(), [&](const Song oneSong){
+            out << oneSong << std::endl;
+});
+
+2.accumulate()
+In the part2 of this workshop, we need to update the function "void SongCollection::display(std::ostream& out) const" to display the total playtime of all songs. To do so, I used accumulate(). The function accumulate() will return the result of accumulating all the value in the range to an initial integer. If I set the initial integer to 0, then I can get the correct value I want.
+
+size_t total = std::accumulate(m_songcollection.begin(), m_songcollection.end(), 0, [](size_t sum, const Song song){
+            return sum + song.m_length;
+});
+
+3.sort()
+In the part2, one new function is we need to be able to sort the songs by title, album or length. Therefore, I used the function sort() in the library <algorithm> to build up the function "void SongCollection::sort(std::string sortBy)". In this function, I used if/else to control which condition to sort, then used sort() from <algorithm> to loop m_songcollection vector to reorder those songs.
+
+void SongCollection::sort(std::string sortBy)
+    {
+        if (sortBy == "title")
+        {
+            std::sort(m_songcollection.begin(), m_songcollection.end(), [](Song s1, Song s2){
+                return s1.m_title < s2.m_title;
+            });
+        }
+        else if (sortBy == "album")
+        {
+            std::sort(m_songcollection.begin(), m_songcollection.end(), [](Song s1, Song s2){
+                return s1.m_album < s2.m_album;
+            });
+        }
+        else if (sortBy == "length")
+        {
+            std::sort(m_songcollection.begin(), m_songcollection.end(), [](Song s1, Song s2){
+                return s1.m_length < s2.m_length;
+            });
+        }
+    }
+
+4.transform()
+In the part2, we need to remove all the [None] from the album field of the songs. Both for_each() and transform() are perfect tool to do so. However, I already used for_each() in the previous function. So I decided to use transform() here. The function transform() finds each songs that have "[None]" as its album name in the m_songcollection and remove its album name.
+
+void SongCollection::cleanAlbum()
+    {
+        std::transform(m_songcollection.begin(), m_songcollection.end(), m_songcollection.begin(), [=](Song song){
+            if (song.m_album == "[None]")
+            {
+                song.m_album = "";
+            }
+            return song;
+        });
+    }
+
+5.any_of()
+Another new function in part2 is we need to be able to find if there is any song in the collection belong to specific artist. Therefore, I used any_of() in the function "bool inCollection() const", any_of() will loop through the m_songcollection vector and find if there is any songs that match the specific artist or not.
+
+bool SongCollection::inCollection(std::string artist) const
+    {
+        return std::any_of(m_songcollection.begin(), m_songcollection.end(), [artist](Song song){
+            return song.m_artist == artist;
+        });
+    }
+
+6.count_if()
+I used count_if() to count the amount that a specific artist in the m_songcollection vector.
+
+auto count = std::count_if(m_songcollection.begin(), m_songcollection.end(), [artist](const Song song){
+            return artist == song.m_artist;
+        });
+
+7.copy_if()
+After counting the amount of the specific artist, I used this amount to create a new list of song collection. Then I use copy_if() to copy all the songs by the artist to that new list.
+
+std::list<Song> collection(count);
+        
+copy_if(m_songcollection.begin(), m_songcollection.end(), collection.begin(), [artist](const Song song){
+            return artist == song.m_artist;
+        });
+
+- Present the advantages of using STL algorithms vs. implementing the functionality by yourself using loops.
+
+The benefit of using STL algorithms is we no longer need to find out the exactly size of a container like a vector or a list. All we need to do is use begin() and end(). Besides, using STL algorithms need less coding work. 
+
+- The function that sorts the collection of songs receives as a parameter the field name to use; this can create errors if the client specifies an invalid field (or misspells it). How would you redesign that function to prevent the client to specify an invalid string, allowing any error to be detected by the compiler?
+
+I can add an else statement to throw an error message and prevent errors. If the clients input an invalid value or misspell it, the proper error message will be thrown. Therefore, I added this code at the end of the function void SongCollection::sort(std::string sortBy) to do so:
+
+else{throw "ERROR: INVALID VALUE.\n";}
