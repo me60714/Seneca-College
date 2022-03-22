@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='/main.css'>
+    <title>LiveFit--login</title>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/homepage" title="LiveFit"><img src="/livefit_logo.png"></a>
+                </div>
+
+                <!--Navigation bar-->
+                <ul class="menu">
+                    <li>
+                        <a href="/homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="/mealpackage">Meals Package</a>
+                    </li>
+                    <li>
+                        <a href="/registration">Registration</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero section-->
+    <section class="hero2">
+        <div class="hero-img2">
+            <img src="/hero-leftimage2.png">
+        </div>
+        <div class="words2">
+            <h1>
+                <P>login</P>
+            </h1>
+        </div>
+    </section>
+
+    <!-- login-->
+        <div id="form">
+            {{#if errorMsg}}
+            <h2>{{errorMsg}}</h2>
+            {{else}}
+            <h2>Please login below</h2>
+            {{/if}}
+            <form id="form-login" method="POST" action="/login">
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <input id="submit" type="submit" name="submit" value="Login"><br>
+        
+            </form>
+        </div>
+
+    <!-- footer-->
+    <hr style="border:none solid gray;">
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-text">
+                <div class="footer-text-header">About Livefit</div>
+                <div class="footer-text-content">
+                    <a href="#">Affiliates</a>
+                    <a href="#">Gift Card</a>
+                    <a href="#">First Responders</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Help & Support</div>
+                <div class="footer-text-content">
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Our Menu</div>
+                <div class="footer-text-content">
+                    <a href="#">All Journeys</a>
+                    <a href="#">Grocery</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-media">
+            <hr style="border:none solid gray;">
+            <div class="footer--">
+                <div class="footer-right">© 2021 LiveFit North America Inc.</div>
+                <div class="footer-link">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

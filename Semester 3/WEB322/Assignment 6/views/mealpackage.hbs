@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='/main.css'>
+    <title>LiveFit--meal package</title>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/homepage" title="LiveFit"><img src="/livefit_logo.png"></a>
+                </div>
+    
+<!--Navigation bar-->
+                <ul class="menu">
+                    <li>
+                        <a href="/homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="/mealpackage">Meals Package</a>
+                    </li>
+                    <li>
+                        <a href="/registration">Registration</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </header>
+
+<!-- hero section-->
+    <section class="hero2">
+        <div class="hero-img2">
+            <img src="/hero-leftimage2.png">
+        </div>
+        <div class="words2">
+            <h1>
+                <P>Our meal packages</P>
+            </h1>
+        </div>
+    </section>
+
+<!-- content section-->
+    <section class="content2">
+        <div class="header">Pick a package, choose your meals, achieve your goal. - it's that easy!</div>
+        <div class="box">
+            <div class="block">
+                <div class="block-img">
+                    <img src="/005.png">
+                </div>
+                <div class="block-content">
+                    <p class="--header"><a href="/mealdesc1">Weight Loss</a></p>
+                    <p class="--content">High protein, low-calorie meals with a nutrient profile tuned for weight loss</p>
+                    <P class="price">from $8/meal</P>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block-img">
+                    <img src="/006.png">
+                </div>
+                <div class="block-content">
+                    <p class="--header"><a href="/mealdesc2">Muscle</a></p>
+                    <p class="--content">Higher protein and calorie portions to support your muscle gain momentum</p>
+                    <P class="price">from $8/meal</P>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block-img">
+                    <img src="/007.png">
+                </div>
+                <div class="block-content">
+                    <p class="--header"><a href="/mealdesc3">Keto</a></p>
+                    <p class="--content">High fat, low carb meals with moderate protein to achieve and sustain ketosis</p>
+                    <P class="price">from $8/meal</P>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block-img">
+                    <img src="/008.png">
+                </div>
+                <div class="block-content">
+                    <p class="--header"><a href="/mealdesc4">Fat Burner</a></p>
+                    <p class="--content">Low carb, nutrient-rich meals with fat-burning profiles to support fat loss</p>
+                    <P class="price">from $8/meal</P>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Number</th>
+                
+            </tr>
+            
+            <tr>
+                <form method="post" action="updateMeal" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{{id}}" />
+                    <td><input type="text" name="name" value="{{name}}" /></td>
+                    <td><input type="text" name="price" value="{{price}}" /></td>
+                    <td><input type="text" name="description" value="{{description}}" /></td>
+                    <td><input type="text" name="category" value="{{category}}" /></td>
+                    <td><input type="text" name="number" value="{{number}}" /></td>
+                    <td><img src="./photos/{{photo}}" style="width:50%;" /></td>
+                    <td><input type="submit" value="Update" /></td>
+                </form>
+
+                <form method="POST" action="deleteMeal" enctype="multipart/form-data">
+                    <td><input type="hidden" name="id" value="{{id}}" /></td>
+                    <td><input type="submit" value="Delete" /></td>
+                </form>
+            </tr>
+            
+            <tr>
+                <td>No Data Available</td>
+            </tr>
+            
+        </table>
+        
+        
+        <p class="add-meal-text">Add a new meal:</p>
+        <div>
+            
+            <form class="add-meal-form" action="/addMeal" method="POST" enctype="multipart/form-data">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" /><br />
+                <label for="price">Price</label>
+                <input id="price" type="text" name="price" /><br />
+                <label for="description">Description</label>
+                <input id="description" type="text" name="description" /><br />
+                <label for="category">Category</label>
+                <input id="category" type="text" name="category" /><br />
+                <label for="number">Number</label>
+                <input id="number" type="text" name="number" /><br />
+                <label for="photo">Photo ID</label>
+                <input id="photo" type="file" name="photo" /><br />
+                <input type="submit" value="Submit File" />
+            </form>
+        </div>
+    </section>
+    
+
+<!-- footer-->
+    <hr style="border:none solid gray;">
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-text">
+                <div class="footer-text-header">About Livefit</div>
+                <div class="footer-text-content">
+                    <a href="#">Affiliates</a>
+                    <a href="#">Gift Card</a>
+                    <a href="#">First Responders</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Help & Support</div>
+                <div class="footer-text-content">
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text-header">Our Menu</div>
+                <div class="footer-text-content">
+                    <a href="#">All Journeys</a>
+                    <a href="#">Grocery</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-media">
+            <hr style="border:none solid gray;">
+            <div class="footer--">
+                <div class="footer-right">© 2021 LiveFit North America Inc.</div>
+                <div class="footer-link">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+</html>
