@@ -1,0 +1,253 @@
+/* *********************************************************************************
+* WEB322 – Assignment 2
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+* No part of this assignment has been copied manually or electronically from any other source
+* (including web sites) or distributed to other students.
+*
+* Name: Wei-Chih Kao Student ID: 15800190 Date: Oct. 3. 2021
+*
+* Online (Heroku) URL:
+*
+********************************************************************************/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+ 
+ * {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+    font-family: "Lato",Arial,Helvetica,sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    height: 50px;
+}
+
+.container{
+    width: 1024px;
+    margin: 0 auto;
+    display:inline;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.menu a:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.navbar {
+    padding: 20px;
+}
+
+.navbar li {
+    padding: 0px 40px;
+}
+
+.logo {
+    display: inline;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.menu {
+    display:flex;
+    padding: 20px;
+    justify-content:space-between;
+    float: right;
+}
+
+.hero {
+    height: 400px;
+    background: url(/wood_table.jpeg)no-repeat;
+    background-size: 100% 100%;
+}
+
+.hero img {
+    padding: 10px 150px;
+    height: 380px;
+}
+
+.words {
+    position: absolute;
+    top: 16%;
+    right: 12%;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    font-size: 3em;
+    margin: 0 0 5px 0;
+}
+
+h2{
+    color:black;
+    font-size: 1.8em;
+    margin: 30px 0 0 0;
+}
+
+.content {
+    height: 400px;
+}
+
+.content .header {
+    padding: 40px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.box {
+    display: flex;
+    justify-content:center;
+}
+
+.block {
+    padding: 5px 50px;
+}
+
+.block .--header {
+    padding: 10px 0 0 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.block .--content {
+    padding: 5px 0 0 0;
+    font-weight:100;
+    text-align: center;
+}
+
+.package {
+    height: 400px;
+    background-color: bisque;
+    margin-bottom: 50px;
+}
+
+.package .header {
+    padding: 40px 0 0 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.package .-content {
+    padding: 10px 0 20px 0;
+    font-weight:100;
+    text-align: center;
+}
+
+.package img {
+    height: 160px;
+}
+
+.footer-box{
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .footer-text-header{
+    font-size: 1.4em;
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+
+.footer .footer-text-content a{
+    display:flex;
+    color: gray;
+    padding: 5px 0;
+}
+
+.footer .footer-text-content a:hover{
+    color: red;
+
+}
+
+.footer-media {
+    padding: 0px 200px 10px 200px;
+}
+
+.footer-- {
+    padding: 15px 10px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.footer-link a{
+    color: #e93553d8;
+    padding: 10px;
+}
+
+.footer-link a:hover{
+    color: gray;
+}
+
+/* meal package */
+
+.hero2 {
+    height: 400px;
+    background: url(/wood_table.jpeg)no-repeat;
+    background-size: 100% 100%;
+}
+
+.hero2 img {
+    padding: 0px 150px;
+    height: 400px;
+}
+
+.words2 h1 {
+    color: red;
+    font-size: 4em;
+    margin: 0;
+}
+
+.words2 {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    text-align: center;
+}
+
+.content2 {
+    height: 400px;
+    padding-bottom: 50px;
+}
+
+.content2 .header {
+    padding: 40px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.content2 img {
+    height: 200px;
+}
+
+.price {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight:900;
+    text-align: center;
+}
+
+.block-img {
+    display: flex;
+    justify-content: center;
+}
