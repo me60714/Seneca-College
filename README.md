@@ -26,7 +26,7 @@ OOP345 -  Multi-threading, containers, inheritance hierarchies and polymorphism 
 OOP345 - Project repository: https://github.com/me60714/Seneca-College/tree/main/Semester%203/OOP345/project/MS3  
 WEB322 -  JavaScript, HTML, CSS, Express.js, Handlebars.js, Mongo DB   
 WEB322 - Project: https://aqueous-coast-16891.herokuapp.com  
-WEB322 - Project repository: https://github.com/me60714/Seneca-College/tree/main/Semester%203/WEB322/Assignment%206
+WEB322 - Project repository: https://github.com/me60714/Seneca-College/tree/main/Semester%203/WEB322/Assignment%206  
 DBS311 -  Sql Plus, Oracle DBMS, Mongo DB  
 
 
