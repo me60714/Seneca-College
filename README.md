@@ -1,6 +1,6 @@
 # Seneca College -- Computer Programming
 
-2021.01 - Present
+Jan 2021 - Aug 2022
 
 1st Semester  --  GPA 4.0/4.0 President's Honour  
 ---------------
@@ -28,3 +28,6 @@ DBS311 -  Sql Plus, Oracle DBMS, Mongo DB
 ---------------
 JAC444 - Java programming  
 BCI433 - IBM iSeries(AS/400)  
+
+CGPA: 3.9  
+---------
